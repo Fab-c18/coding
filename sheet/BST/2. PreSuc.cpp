@@ -27,7 +27,8 @@ void findPreSuc(Node* root, Node*& pre, Node*& suc, int key)
     }
     if(key<root->key)
     {
-        suc=root;
+        suc=root;//because if in the case the node we find doesnt have 
+                  // right node then previous parent one will be the successor
         findPreSuc(root->left,pre,suc,key);
     }
     else if(key>root->key)
